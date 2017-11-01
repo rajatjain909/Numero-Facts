@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Numero Facts</string>
+    <string name="category_name_date">Date</string>
+    <string name="category_name_math">Math</string>
+    <string name="category_name_trivia">Trivia</string>
+    <string name="category_name_year">Year</string>
+</resources>

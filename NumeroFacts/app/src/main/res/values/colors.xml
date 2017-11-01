@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF4465</color>
+    <color name="colorPrimaryDark">#5F0F4E</color>
+    <color name="colorAccent">#FFFFFF</color>
+
+    <!--Custom colors-->
+    <color name="colorCategoryTrivia">#6BBAA7</color><!--FE4365-->
+    <color name="colorCategoryMath">#F8A100</color><!--FC9D9A-->
+    <color name="colorCategoryDate">#6C6488</color><!--C8C8A9-->
+    <color name="colorCategoryYear">#B6A19E</color><!--83AF9B-->
+</resources>
