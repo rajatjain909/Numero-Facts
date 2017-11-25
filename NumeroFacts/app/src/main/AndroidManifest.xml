@@ -12,11 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".NumbersCategoryActivity">
+
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            -->
         </activity>
         <activity
             android:name=".CategoryDateActivity"
@@ -33,7 +36,18 @@
         <activity
             android:name=".CategoryYearActivity"
             android:configChanges="orientation|screenSize"
-            android:label="Year Fact"></activity>
+            android:label="Year Fact" />
+
+        <!-- Retrofit activity -->
+        <activity android:name=".retrofact.RetroMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".retrofact.RandomFactCategory" />
+        <activity android:name=".retrofact.FactPage"></activity>
     </application>
 
 </manifest>
