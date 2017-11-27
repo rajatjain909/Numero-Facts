@@ -19,10 +19,43 @@ public class RandomFactCategory extends AppCompatActivity {
         mCategoryBinding = DataBindingUtil.setContentView(
                 RandomFactCategory.this, R.layout.activity_random_fact_category);
 
+        /*Date intent*/
+        mCategoryBinding.textViewRandomFactDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RandomFactCategory.this, FactPage.class);
+                intent.putExtra("fact", "date");
+                startActivity(intent);
+            }
+        });
+
+        /*Mathematics intent*/
         mCategoryBinding.textViewRandomFactMath.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RandomFactCategory.this, FactPage.class));
+                Intent intent = new Intent(RandomFactCategory.this, FactPage.class);
+                intent.putExtra("fact", "math");
+                startActivity(intent);
+            }
+        });
+
+        /*Trivia intent*/
+        mCategoryBinding.textViewRandomFactTrivia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RandomFactCategory.this, FactPage.class);
+                intent.putExtra("fact", "trivia");
+                startActivity(intent);
+            }
+        });
+
+        /*Year intent*/
+        mCategoryBinding.textViewRandomFactYear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RandomFactCategory.this, FactPage.class);
+                intent.putExtra("fact", "year");
+                startActivity(intent);
             }
         });
     }

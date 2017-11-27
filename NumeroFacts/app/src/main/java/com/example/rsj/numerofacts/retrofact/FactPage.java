@@ -1,5 +1,6 @@
 package com.example.rsj.numerofacts.retrofact;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -36,13 +37,16 @@ public class FactPage extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        /* Api call */
+        /* Api object creation */
         mServiceApi = retrofit.create(FetchFactServiceApi.class);
 
+        /*Api call*/
         mResultFactCall = apiCall();
 
+        /*Add call*/
         forNewFact(mResultFactCall);
 
+        /*Button click operation - new fact fetching*/
         mFactPageBinding.buttomNewFact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,11 +57,26 @@ public class FactPage extends AppCompatActivity {
 
     }
 
+    /*Method for api call*/
     Call<ResultFact> apiCall() {
-        return mServiceApi.getRandomMathFact();
+        Intent intent = getIntent();
+
+        if (intent.getStringExtra("fact").equals("date")) {
+            return mServiceApi.getRandomDateFact();
+        } else if (intent.getStringExtra("fact").equals("math")) {
+            return mServiceApi.getRandomMathFact();
+        } else if (intent.getStringExtra("fact").equals("trivia")) {
+            return mServiceApi.getRandomTriviaFact();
+        } else if (intent.getStringExtra("fact").equals("year")) {
+            return mServiceApi.getRandomYearFact();
+        } else {
+            return null;
+        }
     }
 
+    /*Method to add api call*/
     void forNewFact(Call<ResultFact> mResultFactCall) {
+
         mResultFactCall.enqueue(new Callback<ResultFact>() {
             @Override
             public void onResponse(Call<ResultFact> call, Response<ResultFact> response) {

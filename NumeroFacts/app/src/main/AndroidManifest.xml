@@ -47,7 +47,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".retrofact.RandomFactCategory" />
-        <activity android:name=".retrofact.FactPage"></activity>
+        <activity android:name=".retrofact.FactPage" />
+        <activity android:name=".retrofact.UserInputFact"></activity>
     </application>
 
 </manifest>

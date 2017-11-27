@@ -5,7 +5,6 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.rsj.numerofacts.R;
 import com.example.rsj.numerofacts.databinding.ActivityRetroMainBinding;
@@ -31,7 +30,7 @@ public class RetroMainActivity extends AppCompatActivity {
         mRetroMainBinding.textViewFactUserInput.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(RetroMainActivity.this, "Not working for now", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(RetroMainActivity.this, UserInputFact.class));
             }
         });
     }
