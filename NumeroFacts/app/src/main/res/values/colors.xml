@@ -9,4 +9,9 @@
     <color name="colorCategoryMath">#F8A100</color><!--FC9D9A-->
     <color name="colorCategoryDate">#6C6488</color><!--C8C8A9-->
     <color name="colorCategoryYear">#B6A19E</color><!--83AF9B-->
+
+    <!--Retro numero theme colors-->
+    <color name="colorRetroPrimary">#3F51B5</color>
+    <color name="colorRetroPrimaryDark">#303F9F</color>
+    <color name="colorRetroAccent">#FF4081</color>
 </resources>

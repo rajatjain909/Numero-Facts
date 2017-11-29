@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Retro application theme. -->
+    <style name="RetroFitTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorRetroPrimary</item>
+        <item name="colorPrimaryDark">@color/colorRetroPrimaryDark</item>
+        <item name="colorAccent">@color/colorRetroAccent</item>
+    </style>
+
 </resources>

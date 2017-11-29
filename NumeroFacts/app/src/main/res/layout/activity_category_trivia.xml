@@ -67,6 +67,7 @@
             android:padding="16dp"
             android:text="New Fact"
             android:textAppearance="?android:attr/textAppearanceLarge" />
+
     </FrameLayout>
 
 </LinearLayout>

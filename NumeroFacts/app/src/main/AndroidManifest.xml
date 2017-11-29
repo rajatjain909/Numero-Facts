@@ -39,16 +39,27 @@
             android:label="Year Fact" />
 
         <!-- Retrofit activity -->
-        <activity android:name=".retrofact.RetroMainActivity">
+        <activity
+            android:name=".retrofact.RetroMainActivity"
+            android:theme="@style/RetroFitTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".retrofact.RandomFactCategory" />
-        <activity android:name=".retrofact.FactPage" />
-        <activity android:name=".retrofact.UserInputFact"></activity>
+        <activity
+            android:name=".retrofact.RandomFactCategory"
+            android:theme="@style/RetroFitTheme" />
+        <activity
+            android:name=".retrofact.FactPage"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/RetroFitTheme" />
+        <activity
+            android:name=".retrofact.UserInputFact"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/RetroFitTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
     </application>
 
 </manifest>
